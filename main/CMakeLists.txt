@@ -1,0 +1,11 @@
+idf_component_register(
+    SRCS
+        "main.c"
+    INCLUDE_DIRS
+        "."
+    REQUIRES
+        driver
+        st_vl53l4cd
+        esp_lcd
+        esp_driver_spi
+)

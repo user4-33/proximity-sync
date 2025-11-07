@@ -1,0 +1,24 @@
+# ESP-IDF / CMake build output
+/build/
+/main/build/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/compile_commands.json
+/partition_table/
+/project_description.json
+
+# Binaries / images
+/*.bin
+/*.elf
+/*.map
+/flasher_args.json
+/flasher_args.json.in
+
+# IDF + config leftovers
+/sdkconfig.old
+/log/
+
+# Editors / OS
+.vscode/
+.DS_Store
