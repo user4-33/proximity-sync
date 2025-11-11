@@ -105,7 +105,7 @@ static void sensor_task(void *arg) {
 
 
     // Offset calibration – to be performed once before production
-    // Place a 17% reflective target at 100 mm distance in dark conditions (available at our video equipment).
+    // Place a 17% reflective target at 100 mm distance in dark conditions
     /*int16_t offset_mm = 0;
     status = VL53L4CD_CalibrateOffset(dev, 100, &offset_mm, 20);
     if(status == 0) {
@@ -114,7 +114,7 @@ static void sensor_task(void *arg) {
         ESP_LOGE(TAG_SENSOR, "Offset calibration failed (status: %u)", status);
     }*/
     // Apply offset after successful calibration
-    int16_t offset_mm = -23; // individual offset from your calibration printout (Sensor #1: -23, Sensor #2: -23)
+    int16_t offset_mm = -23; // individual offset from your calibration printout
     VL53L4CD_SetOffset(dev, offset_mm);
     ESP_LOGI(TAG_SENSOR, "Applied stored offset: %d mm", offset_mm);
 
@@ -243,8 +243,6 @@ static void lcd_task(void *arg) {
             
             if (status == 0) {
                 // Valid measurement
-                // Sensor #1: 36cm ± 3cm range
-                // Sensor #2: 35cm ± 3cm range
                 if (distance >= 320 && distance <= 380) {
                     color = GREEN; // Green - distance is within desired range
                     ESP_LOGI(TAG_LCD, "Speaker within range: %.1f cm", distance / 10.0f);
