@@ -13,8 +13,8 @@ The LCD acts as a binary semaphore: it shows whether the speaker is at the corre
 
 ### Pin Connections
 
-#### Sensor ↔︎ ESP32
-| Sensor Pin | ESP32 Pin | Notes |
+#### VL53L4CD ↔︎ ESP32
+| VL53L4CD Pin | ESP32 Pin | Notes |
 |-------------|------------|-------|
 | GND | GND | Ground |
 | VIN | 3V3 | Power supply (3.3 V) |
@@ -22,8 +22,8 @@ The LCD acts as a binary semaphore: it shows whether the speaker is at the corre
 | SCL | GPIO22 | I²C clock line |
 | XSHUT | GPIO33 | Shutdown / enable control |
 
-#### Display ↔︎ ESP32
-| Display Pin | ESP32 Pin | Notes |
+#### Waveshare LCD ↔︎ ESP32
+| Waveshare LCD Pin | ESP32 Pin | Notes |
 |--------------|------------|-------|
 | GND | GND | Ground |
 | VCC | 3V3 | Power supply (3.3 V) |
