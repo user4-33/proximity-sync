@@ -11,6 +11,29 @@ The setup consists of the following components:
 
 The LCD acts as a binary semaphore: it shows whether the speaker is at the correct distance from the microphone array.
 
+### Pin Connections
+
+#### Sensor ↔︎ ESP32
+| Sensor Pin | ESP32 Pin | Notes |
+|-------------|------------|-------|
+| GND | GND | Ground |
+| VIN | 3V3 | Power supply (3.3 V) |
+| SDA | GPIO21 | I²C data line |
+| SCL | GPIO22 | I²C clock line |
+| XSHUT | GPIO33 | Shutdown / enable control |
+
+#### Display ↔︎ ESP32
+| Display Pin | ESP32 Pin | Notes |
+|--------------|------------|-------|
+| GND | GND | Ground |
+| VCC | 3V3 | Power supply (3.3 V) |
+| DIN | GPIO23 | SPI Data input: MOSI/SDO/COPI |
+| CLK | GPIO18 | SPI Clock input: SCK/CLK/SCLK |
+| CS  | GPIO5 | Chip select, Low active: SS/CS |
+| DC  | GPIO16 | Data/Command select/Mode select |
+| RST | GPIO17 | Hardware reset |
+| BL | GPIO4 | LED backlight control |
+
 
 
 ## Software
