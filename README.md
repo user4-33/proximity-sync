@@ -14,7 +14,7 @@ The LCD acts as a binary semaphore: it shows whether the speaker is at the corre
 
 
 ## Software
-- **Framework:** ESP-IDF (v5.x recommended)
+- **Framework:** [ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/v5.2.5/esp32s3/index.html) (v5.x recommended)
 - **Language:** C
 - **Dependencies:**
   - `driver` – base GPIO, I2C, and SPI drivers
